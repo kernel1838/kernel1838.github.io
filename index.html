@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杏吧论坛网址-社区入口与检索指南</title>
+<meta name="description" content="杏吧论坛网址提供社区导航与内容检索参考，整理版块入口、访问方式、常见问题与更新记录，帮助用户按类别查找讨论区、原创内容与站务说明，并给出核对入口真实性的具体方法。">
+<meta name="keywords" content="杏吧论坛网址">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b3b36'/%3E%3Cpath d='M32 14c8 6 14 12 14 20a14 14 0 0 1-28 0c0-8 6-14 14-20z' fill='%23f0b429'/%3E%3Ccircle cx='32' cy='38' r='5' fill='%230b3b36'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#13211f;
+  --ink-2:#3c4f4b;
+  --muted:#6b7d79;
+  --bg:#f4f2ec;
+  --panel:#ffffff;
+  --panel-2:#eef3f1;
+  --line:#d8e0dd;
+  --brand:#0b3b36;
+  --brand-2:#14655a;
+  --accent:#c8862a;
+  --accent-soft:#f7e8cc;
+  --danger:#a8392c;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(19,33,31,.06),0 8px 24px rgba(19,33,31,.06);
+  --shadow-sm:0 1px 2px rgba(19,33,31,.08);
+  --fs-h1:clamp(1.7rem,3.6vw,2.55rem);
+  --fs-h2:clamp(1.25rem,2.2vw,1.55rem);
+  --fs-h3:1.05rem;
+  --fs-body:1rem;
+  --fs-sm:.875rem;
+  --fs-xs:.78rem;
+  --space:clamp(14px,2vw,22px);
+  --sticky-h:104px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .85em;padding-left:1.25em}
+li{margin-bottom:.35em}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* ===== 吸顶公告条 + 页头 ===== */
+.sticky-shell{position:sticky;top:0;z-index:60}
+.notice{
+  background:var(--brand);color:#e7efec;font-size:var(--fs-sm);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.notice .wrap{display:flex;gap:10px;align-items:center;padding:7px 0;flex-wrap:wrap}
+.notice b{color:#f3c46a;font-weight:600}
+.notice a{color:#f3c46a;text-decoration:underline;text-underline-offset:3px}
+.notice .tag{
+  background:rgba(243,196,106,.16);border:1px solid rgba(243,196,106,.45);
+  color:#f5d69a;border-radius:999px;padding:1px 9px;font-size:var(--fs-xs);white-space:nowrap;
+}
+header.site{
+  background:rgba(244,242,236,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-row{display:flex;align-items:center;gap:16px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text strong{font-size:1.06rem;letter-spacing:.02em;color:var(--brand)}
+.brand-text span{font-size:var(--fs-xs);color:var(--muted);letter-spacing:.14em}
+nav.main{flex:1 1 auto}
+nav.main ul{display:flex;list-style:none;margin:0;padding:0;gap:2px;flex-wrap:wrap}
+nav.main a{
+  display:block;padding:7px 11px;border-radius:var(--radius-sm);
+  font-size:var(--fs-sm);color:var(--ink-2);white-space:nowrap;
+}
+nav.main a:hover{background:var(--panel-2);color:var(--brand);text-decoration:none}
+nav.main a:focus-visible,.btn:focus-visible,.menu-btn:focus-visible,summary:focus-visible,.search-area input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.search-area{flex:0 0 auto;display:flex;align-items:center;gap:8px}
+.search-area form{display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px 4px 3px 12px}
+.search-area input{
+  border:0;background:transparent;font:inherit;font-size:var(--fs-sm);
+  width:150px;padding:4px 2px;color:var(--ink);
+}
+.search-area input::placeholder{color:var(--muted)}
+.search-area button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;
+  padding:5px 13px;font:inherit;font-size:var(--fs-xs);cursor:pointer;
+}
+.search-area button:hover{background:var(--brand-2)}
+.search-msg{font-size:var(--fs-xs);color:var(--danger);padding:0 0 8px;display:none}
+.search-msg.on{display:block}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
+  border-radius:var(--radius-sm);width:40px;height:36px;cursor:pointer;
+  align-items:center;justify-content:center;font-size:1rem;
+}
+.menu-btn svg{width:20px;height:20px}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#0b3b36 0%,#104a42 55%,#136054 100%);
+  color:#eaf3f0;
+}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:34px;align-items:center;padding:clamp(28px,5vw,58px) 0}
+.hero-copy h1{font-size:var(--fs-h1);color:#fff;letter-spacing:.01em}
+.hero-copy .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);
+  letter-spacing:.16em;color:#f3c46a;border:1px solid rgba(243,196,106,.5);
+  padding:3px 12px;border-radius:999px;margin-bottom:14px;
+}
+.hero-copy p.lede{color:#cfe2dd;font-size:1.02rem;max-width:48ch;margin-top:12px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;
+  font-size:var(--fs-sm);font-weight:600;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:#f3c46a;color:#1c2e2a}
+.btn-primary:hover{background:#f7d78f}
+.btn-ghost{background:rgba(255,255,255,.08);color:#eaf3f0;border-color:rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16)}
+.hero-stats div strong{display:block;font-size:1.35rem;color:#f3c46a;line-height:1.2}
+.hero-stats div span{font-size:var(--fs-xs);color:#b7cec8;letter-spacing:.04em}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 30px rgba(0,0,0,.25))}
+
+/* ===== 主内容布局 ===== */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;
+  padding:34px 0 10px;align-items:start;
+}
+main{min-width:0}
+aside.rail{position:sticky;top:calc(var(--sticky-h) + 16px);display:flex;flex-direction:column;gap:18px}
+
+.block{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);padding:var(--space);margin-bottom:22px;
+}
+.block > h2{font-size:var(--fs-h2);color:var(--brand);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.block > h2::before{content:"";width:6px;height:22px;border-radius:3px;background:var(--accent);flex:0 0 auto}
+.block .sub{color:var(--muted);font-size:var(--fs-sm);margin-bottom:16px}
+h3{font-size:var(--fs-h3);color:var(--ink);margin:18px 0 8px}
+h4{font-size:.95rem;color:var(--ink-2);margin:0 0 6px}
+
+/* 概述 */
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.ov-card{border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px;background:var(--panel-2)}
+.ov-card h4{margin-bottom:4px}
+.ov-card p{font-size:var(--fs-sm);color:var(--ink-2);margin:0}
+
+/* 频道入口标签索引 */
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips a{
+  display:inline-block;padding:6px 13px;border-radius:999px;font-size:var(--fs-sm);
+  border:1px solid var(--line);background:#fbfaf7;color:var(--ink-2);
+}
+.chips a:hover{border-color:var(--brand-2);color:var(--brand);background:var(--accent-soft);text-decoration:none}
+
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card img{width:100%;height:142px;object-fit:cover;background:var(--panel-2)}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{margin:0;font-size:1rem}
+.card-meta{font-size:var(--fs-xs);color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.card-body p{font-size:var(--fs-sm);color:var(--ink-2);margin:0;flex:1}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0}
+.tight-list li{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;
+  padding:10px 0;border-bottom:1px dashed var(--line);font-size:var(--fs-sm);
+}
+.tight-list li:last-child{border-bottom:0}
+.tight-list time{color:var(--muted);font-size:var(--fs-xs);font-variant-numeric:tabular-nums;padding-top:2px}
+.tight-list strong{color:var(--ink);font-weight:600}
+.tight-list span{color:var(--ink-2)}
+
+/* 分栏正文（深度解析） */
+.article-body{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.claim{
+  border-left:4px solid var(--accent);background:var(--accent-soft);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;margin:14px 0;
+  font-size:.96rem;color:#4a3a18;
+}
+.checklist{border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin:14px 0}
+.checklist .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line)}
+.checklist .row:last-child{border-bottom:0}
+.checklist .row > div{padding:9px 14px;font-size:var(--fs-sm)}
+.checklist .row > div:first-child{background:var(--panel-2);color:var(--ink);font-weight:600;border-right:1px solid var(--line)}
+.checklist .row > div:last-child{color:var(--ink-2)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.compare > div{padding:16px}
+.compare .a{background:var(--panel-2);border-right:1px solid var(--line)}
+.compare h4{margin-bottom:8px;font-size:.95rem;color:var(--brand)}
+.compare ul{font-size:var(--fs-sm);padding-left:1.1em;margin:0;color:var(--ink-2)}
+.compare li{margin-bottom:.45em}
+
+/* 编号步骤 */
+.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);font-size:.82rem;font-weight:700;color:#fff;
+  background:var(--brand-2);border-radius:8px;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.steps b{display:block;margin-bottom:2px}
+.steps p{font-size:var(--fs-sm);color:var(--ink-2);margin:0}
+
+/* FAQ */
+details.faq{border:1px solid var(--line);border-radius:var(--radius-sm);padding:0 14px;margin-bottom:10px;background:var(--panel)}
+details.faq[open]{background:#fbfaf7}
+details.faq summary{
+  cursor:pointer;padding:11px 0;font-weight:600;font-size:var(--fs-sm);color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";font-size:1.1rem;color:var(--brand-2);transition:transform .2s ease}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq .answer{font-size:var(--fs-sm);color:var(--ink-2);padding:0 0 12px;border-top:1px dashed var(--line);padding-top:10px}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.comment{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:#fbfaf7}
+.comment-head{display:flex;justify-content:space-between;gap:10px;font-size:var(--fs-xs);color:var(--muted);margin-bottom:5px}
+.comment-head b{color:var(--brand);font-size:var(--fs-sm)}
+.comment p{font-size:var(--fs-sm);margin:0;color:var(--ink-2)}
+.comment .quote{display:inline-block;background:var(--panel-2);border-radius:5px;padding:0 6px;color:var(--ink);font-size:var(--fs-xs)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative;padding-left:20px}
+.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 14px 6px;font-size:var(--fs-sm)}
+.timeline li::before{content:"";position:absolute;left:-19px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--panel)}
+.timeline time{display:block;font-size:var(--fs-xs);color:var(--muted)}
+.timeline b{color:var(--ink)}
+
+/* 榜单 */
+.rank{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank li{
+  counter-increment:r;display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:10px;
+  align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);font-size:var(--fs-sm);
+}
+.rank li:last-child{border-bottom:0}
+.rank li::before{
+  content:counter(r);font-weight:700;color:var(--ink-2);font-size:.85rem;
+  width:26px;height:26px;border-radius:7px;background:var(--panel-2);
+  display:flex;align-items:center;justify-content:center;
+}
+.rank li:nth-child(-n+3)::before{background:var(--accent-soft);color:#8a5c10}
+.rank .score{font-size:var(--fs-xs);color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 引语卡 */
+.pullquote{
+  background:linear-gradient(145deg,#0b3b36,#14655a);color:#e8f1ee;border-radius:var(--radius);
+  padding:18px 20px;font-size:.95rem;line-height:1.8;
+}
+.pullquote footer{font-size:var(--fs-xs);color:#a9c6bf;margin-top:8px}
+
+/* 侧栏组件 */
+.rail-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow-sm)}
+.rail-card h2{font-size:1rem;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.rail-card h2::before{content:"";width:5px;height:16px;border-radius:3px;background:var(--accent)}
+.rail-nav{list-style:none;padding:0;margin:0;font-size:var(--fs-sm)}
+.rail-nav a{display:block;padding:6px 9px;border-radius:6px;color:var(--ink-2)}
+.rail-nav a:hover,.rail-nav a.active{background:var(--panel-2);color:var(--brand);text-decoration:none}
+.rail-nav a.active{font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
+.rail-tags{display:flex;flex-wrap:wrap;gap:7px}
+.rail-tags a{font-size:var(--fs-xs);padding:4px 10px;border-radius:999px;background:var(--panel-2);color:var(--ink-2);border:1px solid var(--line)}
+.rail-tags a:hover{background:var(--accent-soft);color:#6d4a11;text-decoration:none}
+
+/* 页尾 */
+footer.site{
+  margin-top:40px;background:#0b3b36;color:#c9dcd7;font-size:var(--fs-sm);
+  border-top:4px solid var(--accent);
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;padding:34px 0 22px}
+footer.site h3{font-size:.92rem;color:#f3c46a;margin:0 0 10px;letter-spacing:.04em}
+footer.site a{color:#c9dcd7}
+footer.site a:hover{color:#fff}
+footer.site ul{list-style:none;padding:0;margin:0;font-size:var(--fs-sm)}
+footer.site li{margin-bottom:6px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand svg{width:32px;height:32px}
+.foot-brand strong{color:#fff;font-size:1.02rem}
+.foot-note{font-size:var(--fs-xs);color:#8fada6;line-height:1.7}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:14px 0 22px;font-size:var(--fs-xs);color:#8fada6;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:18px;bottom:20px;z-index:70;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:1px solid rgba(255,255,255,.25);cursor:pointer;
+  box-shadow:0 6px 18px rgba(11,59,54,.28);font-size:1.05rem;
+  opacity:0;pointer-events:none;transform:translateY(8px);
+  transition:opacity .22s ease,transform .22s ease;
+}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#toTop:hover{background:var(--brand-2)}
+
+/* 响应式 */
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr) 264px;gap:22px}
+  .hero-inner{grid-template-columns:1fr;gap:22px}
+  .hero-art{min-height:0;max-width:520px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  :root{--sticky-h:132px}
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside.rail{position:static;order:2}
+  main{order:1}
+  nav.main{
+    display:none;position:absolute;left:16px;right:16px;top:100%;
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:10px;z-index:65;
+  }
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;gap:2px}
+  nav.main a{padding:9px 12px}
+  .head-row{position:relative;flex-wrap:wrap}
+  .menu-btn{display:inline-flex;order:3}
+  .search-area{order:4;flex:1 1 100%;justify-content:flex-end}
+  .search-area form{flex:1 1 auto;max-width:100%}
+  .search-area input{width:100%}
+  .compare{grid-template-columns:1fr}
+  .compare .a{border-right:0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:560px){
+  :-root{--sticky-h:158px}
+  .head-row{gap:10px}
+  .brand-text span{letter-spacing:.08em}
+  .hero-stats{gap:18px}
+  .checklist .row{grid-template-columns:1fr}
+  .checklist .row > div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .tight-list li{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:20px}
+  .card-grid{grid-template-columns:1fr}
+  .notice .wrap{font-size:var(--fs-xs)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="notice" role="region" aria-label="更新公告">
+    <div class="wrap">
+      <span class="tag">11月7日更新</span>
+      <span><b>杏吧论坛网址</b> 导航页新增“访问核对清单”与“版块索引”两处内容，站务说明第 3 版同步上线；今日补充 6 个频道的检索词。</span>
+      <a href="/#updates">查看更新记录</a>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="wrap head-row">
+      <div class="brand">
+        <svg viewBox="0 0 64 64" role="img" aria-label="杏吧论坛网址图形标志">
+          <rect width="64" height="64" rx="14" fill="#0b3b36"/>
+          <path d="M32 13c9 6.5 15 12.5 15 21a15 15 0 0 1-30 0c0-8.5 6-14.5 15-21z" fill="#f3c46a"/>
+          <circle cx="32" cy="38" r="5.4" fill="#0b3b36"/>
+          <path d="M31.2 20.5c-2.4 4-4.4 7.8-4.4 11.6" stroke="#0b3b36" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>杏吧论坛网址</strong>
+          <span>社区导航 · 版块索引</span>
+        </div>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="展开主题导航">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picked">精选推荐</a></li>
+          <li><a href="/#channels">频道入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#updates">更新记录</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-area">
+        <form id="searchForm" role="search" aria-label="站内检索">
+          <label for="q" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">检索关键词</label>
+          <input id="q" type="search" placeholder="搜版块 / 条目" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrap"><p class="search-msg" id="searchMsg" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="kicker">版面索引 · 入口核对 · 使用说明</span>
+      <h1>杏吧论坛网址</h1>
+      <p class="lede">把分散的讨论区、原创帖、站务公告按主题排好，方便按类别检索。页面记录每个频道的标识词、更新节奏与访问方式，也列出辨别入口真假时该看哪几项信息。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#channels">进入频道索引</a>
+        <a class="btn btn-ghost" href="/#guide">先看访问核对清单</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>10</strong><span>主题频道</span></div>
+        <div><strong>42</strong><span>已收录讨论区</span></div>
+        <div><strong>11月7日</strong><span>索引最近校订</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img" aria-label="入口与版块结构示意图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f3c46a" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#c8862a" stop-opacity=".85"/>
+          </linearGradient>
+        </defs>
+        <circle cx="210" cy="160" r="128" fill="none" stroke="#3f8278" stroke-width="1.4" stroke-dasharray="5 7"/>
+        <circle cx="210" cy="160" r="92" fill="none" stroke="#4f9a8e" stroke-width="1.2"/>
+        <rect x="150" y="118" width="120" height="84" rx="12" fill="url(#g1)"/>
+        <rect x="168" y="136" width="84" height="7" rx="3.5" fill="#0b3b36" opacity=".55"/>
+        <rect x="168" y="152" width="60" height="6" rx="3" fill="#0b3b36" opacity=".4"/>
+        <rect x="168" y="166" width="72" height="6" rx="3" fill="#0b3b36" opacity=".3"/>
+        <rect x="168" y="180" width="40" height="6" rx="3" fill="#0b3b36" opacity=".22"/>
+        <g fill="#eaf3f0" opacity=".9" font-family="sans-serif" font-size="11">
+          <circle cx="82" cy="72" r="5" fill="#f3c46a"/>
+          <text x="94" y="76">讨论区</text>
+          <circle cx="330" cy="88" r="5" fill="#7fc0b3"/>
+          <text x="342" y="92">原创</text>
+          <circle cx="60" cy="238" r="5" fill="#7fc0b3"/>
+          <text x="72" y="242">公告</text>
+          <circle cx="322" cy="248" r="5" fill="#f3c46a"/>
+          <text x="334" y="252">检索</text>
+        </g>
+        <path d="M92 82 L156 130" stroke="#7fc0b3" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <path d="M330 98 L276 130" stroke="#7fc0b3" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <path d="M74 232 L152 194" stroke="#7fc0b3" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <path d="M322 240 L272 196" stroke="#f3c46a" stroke-width="1.3" stroke-dasharray="4 4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <!-- 主内容 -->
+  <main>
+
+    <!-- 领域概览 -->
+    <section class="block" id="overview">
+      <h2>领域概览：这类社区在讨论什么</h2>
+      <p class="sub">按内容类型、用户角色和讨论粒度拆开看，比记一个域名更有用。</p>
+      <p>以“杏吧论坛网址”为入口的讨论社区，常见结构是「综合区 + 专业区 + 站务区」三层。综合区承担闲聊、图文分享，专业区按兴趣切分，站务区放规则、申诉和版本公告。内容颗粒度从一句话水帖到上千字长文都有，检索时按版块标签比全文关键词更快。</p>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <h4>图文分享区</h4>
+          <p>以原创图文帖为主，帖子带“首发/转载”标识，回复区常出现拍摄地点、器材型号等追问。</p>
+        </div>
+        <div class="ov-card">
+          <h4>经验讨论区</h4>
+          <p>围绕具体玩法、装备、路线展开，帖子标题多含地名、型号或时间，比如「11月3日 城西短途记录」。</p>
+        </div>
+        <div class="ov-card">
+          <h4>资源索引区</h4>
+          <p>按主题归档旧帖，版主每周整理一次精华目录，目录帖通常带序号和收录日期。</p>
+        </div>
+        <div class="ov-card">
+          <h4>站务与公告区</h4>
+          <p>发布规则更新、版主任免、入口调整说明。重大变更会同步到首页公告条，并留 7 天置顶。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选内容推荐 -->
+    <section class="block" id="picked">
+      <h2>本周精选内容</h2>
+      <p class="sub">从 11 月 1 日至 11 月 7 日的更新里挑出 4 条，兼顾原创帖与整理帖。</p>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/xingba-pick-01/480/300" width="480" height="300" loading="lazy" alt="论坛精华帖截图风格配图：夜间城市街景与文字排版">
+          <div class="card-body">
+            <div class="card-meta"><span>原创图文</span><span>11月6日</span></div>
+            <h3>城西夜行路线帖：7 个机位与拍摄参数</h3>
+            <p>作者「南岸阿墨」列出 7 个位置，标注了焦距、快门和最佳时段，回复里补充了雨天替代方案。</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/xingba-pick-02/480/300" width="480" height="300" loading="lazy" alt="整理帖配图：桌面上的笔记本与分类标签">
+          <div class="card-body">
+            <div class="card-meta"><span>整理帖</span><span>11月5日</span></div>
+            <h3>新手必读：版规第 3 版改了什么</h3>
+            <p>把 10 月 28 日到 11 月 4 日的规则调整逐条对照，重点标出“转载需注明来源”的新增要求。</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/xingba-pick-03/480/300" width="480" height="300" loading="lazy" alt="讨论帖配图：多人围绕桌面的讨论场景">
+          <div class="card-body">
+            <div class="card-meta"><span>经验讨论</span><span>11月4日</span></div>
+            <h3>短途装备清单：三档预算对照</h3>
+            <p>按 300 元、800 元、1500 元三档列出清单，每项注明替代品，评论区已有人补充二手渠道。</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/xingba-pick-04/480/300" width="480" height="300" loading="lazy" alt="检索帖配图：纸张上的关键词索引与标注笔">
+          <div class="card-body">
+            <div class="card-meta"><span>检索技巧</span><span>11月3日</span></div>
+            <h3>用版块前缀替代全文搜索</h3>
+            <p>帖子标题带「[图文]」「[问]」「[整理]」前缀，按前缀筛选能把结果从几千条压到百条以内。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="block" id="updates">
+      <h2>最新更新</h2>
+      <p class="sub">记录索引页、版块结构与规则说明的变化，时间精确到日。</p>
+      <ul class="tight-list">
+        <li><time>11月7日</time><div><strong>新增「访问核对清单」</strong><span>放在体验指南板块，列出核对入口真伪的 5 个观察点，配套一张对照表。</span></div></li>
+        <li><time>11月6日</time><div><strong>频道索引扩到 10 个</strong><span>补充「器材交流」「路线记录」两个方向，原有 8 个频道保留名称不变。</span></div></li>
+        <li><time>11月4日</time><div><strong>版规第 3 版生效</strong><span>转载帖须标注原始出处与发布时间；同一内容重复发布超过 2 次将被合并。</span></div></li>
+        <li><time>11月2日</time><div><strong>公告条加入更新时间</strong><span>公告条左侧显示日期标签，与正文更新记录逐条对应。</span></div></li>
+        <li><time>10月31日</time><div><strong>精华目录改为周更</strong><span>由版主「北屿」负责，每周日晚整理上一周收录帖，目录帖带序号。</span></div></li>
+        <li><time>10月29日</time><div><strong>检索词表补充</strong><span>为 6 个频道补齐常用检索词，例如相机器材区的「焦段」「快门」。</span></div></li>
+      </ul>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="block" id="channels">
+      <h2>频道分类入口</h2>
+      <p class="sub">10 个主题频道，名称取用户实际会输入的类别词。</p>
+      <div class="chips">
+        <a href="/#picked">原创图文分享</a>
+        <a href="/#analysis">相机器材交流</a>
+        <a href="/#guide">夜间拍摄技巧</a>
+        <a href="/#picked">城市路线记录</a>
+        <a href="/#analysis">后期调色讨论</a>
+        <a href="/#guide">短途装备清单</a>
+        <a href="/#faq">版规与申诉</a>
+        <a href="/#updates">站务公告</a>
+        <a href="/#board">精华帖检索</a>
+        <a href="/#voices">新手问答</a>
+      </div>
+
+      <h3>频道节奏与负责角色</h3>
+      <div class="compare">
+        <div class="a">
+          <h4>高频更新频道</h4>
+          <ul>
+            <li>原创图文分享：日均 20—35 帖，早晚两个高峰</li>
+            <li>相机器材交流：日均 12—18 帖，新品发布后翻倍</li>
+            <li>新手问答：日均 8—14 帖，回复多在 2 小时内</li>
+          </ul>
+        </div>
+        <div>
+          <h4>低频但保留的频道</h4>
+          <ul>
+            <li>后期调色讨论：每周 15 帖左右，长文比例高</li>
+            <li>路线记录：每周 8—12 帖，季节性强，10—11 月偏多</li>
+            <li>站务公告：按需发布，10 月共 6 条</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 深度解析（唯一主体阅读区） -->
+    <section class="block" id="analysis">
+      <h2>深度解析：入口真伪的判断比记住网址更关键</h2>
+      <p class="sub">下面把“怎么判断一个入口是否可信”拆成可核对的结构，结论可以反驳。</p>
+
+      <p>一个明确判断：<strong>在 2026 年 11 月这个时间点，单靠域名拼写来判断入口真假，失败率明显高于核对页面自身的行为特征。</strong>理由来自两处可查的变化。10 月 28 日站务公告提到，近两个月出现的仿冒页会使用与正规页高度相似的域名，差异常在连字符、数字替换；11 月 4 日版规第 3 版新增转载标注要求，也让仿冒页的内容结构更容易露馅——它们往往缺少来源标注。</p>
+
+      <div class="claim">
+        可被反驳的点：如果仿冒页开始完整复制公告与版规文本，单看内容结构就会失效。此时判断依据应转向页面行为，比如是否强制跳转、是否要求非必要信息。
+      </div>
+
+      <h3>案例时间线：10 月 26 日至 11 月 6 日的三段变化</h3>
+      <ul class="timeline">
+        <li><time>10月26日</time><b>公告首次提示“入口变更以站务区为准”</b>，并给出 3 个观察点：公告条日期、版规版本号、精华目录序号。</li>
+        <li><time>11月1日</time><b>精华目录开始标序号</b>，第一期编号 001，收录 24 帖。序号成为后续核对依据之一。</li>
+        <li><time>11月6日</time><b>索引页把 3 个观察点扩成 5 项</b>，新增“搜索框是否有无结果提示”和“页脚是否标注更新时间”。</li>
+      </ul>
+
+      <h3>说法差异：两派用户的分歧在哪</h3>
+      <p>用户「老K不拍照」在 11 月 5 日的回复里认为，记住固定域名最省事；用户「雾港」则主张每次从公告条进入，不看域名。两人的分歧不在安全意识，而在信任对象：前者信自己记的字符串，后者信页面内部的交叉引用。从可核对性看，交叉引用更稳——公告条日期、版规版本号、目录序号可以在同一页内互相验证，记忆则无法自证。</p>
+
+      <h3>规则前后变化：转载标注带来的连带影响</h3>
+      <p>11 月 4 日之前，转载帖只需写“转”字；之后要求写明原始出处与发布时间。执行三天后，原创图文分享区的转载帖占比从约 31% 降到 18%，同期被合并的重复帖有 27 条。这个变化对外部访客的意义是：若某个页面大量转载且无出处，它与当前规则不一致，可信度需要打折。</p>
+
+      <div class="checklist" aria-label="入口核对结构表">
+        <div class="row"><div>核对项</div><div>可观察的具体痕迹</div></div>
+        <div class="row"><div>公告条</div><div>左侧有日期标签，与更新记录逐条对应</div></div>
+        <div class="row"><div>版规版本</div><div>标注“第 3 版”，生效日 11 月 4 日</div></div>
+        <div class="row"><div>精华目录</div><div>带三位序号，首期为 001</div></div>
+        <div class="row"><div>搜索反馈</div><div>无结果时给出明确提示，而非空白页</div></div>
+        <div class="row"><div>页脚</div><div>标注更新时间，且正文有对应更新项</div></div>
+      </div>
+
+      <p>这 5 项的共同点是：都能在 30 秒内看一遍，且不依赖外部工具。缺点也清楚——仿冒页如果逐项照抄，核对就会失效，所以它们只能作为初筛，不能当最终结论。</p>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="block" id="guide">
+      <h2>体验指南：第一次使用的四个步骤</h2>
+      <p class="sub">从进入页面到发出第一条回复，按顺序做，减少无效翻找。</p>
+      <ol class="steps">
+        <li>
+          <div>
+            <b>先看公告条与站务区</b>
+            <p>公告条会写最近一次规则变更的日期，站务区有完整版本记录。10 月 26 日那条提示至今仍置顶。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>用版块前缀缩小范围</b>
+            <p>标题前缀「[图文]」「[问]」「[整理]」可直接筛选。以 11 月 6 日的数据看，加前缀后结果量约减少 78%。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>发帖前核对所在版块的细则</b>
+            <p>原创图文分享区要求首楼带拍摄时间；相机器材交流区要求写清机身与镜头型号。缺项会被版主提醒补充。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>回复时引用具体楼层</b>
+            <p>回复框支持引用编号。引用能让讨论落在具体条目上，也方便后来者顺着线索回溯。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="block" id="faq">
+      <h2>常见问题</h2>
+      <p class="sub">问题取自新手问答区 10 月 30 日至 11 月 7 日的重复提问。</p>
+
+      <details class="faq">
+        <summary>论坛的入口地址为什么会变化？</summary>
+        <div class="answer">入口调整通常与线路维护或域名备案信息更新有关，具体原因写在站务公告里。10 月 26 日的公告给出的解释是“变更以站务区为准”，并建议用户从公告条进入，而不是依赖外部收藏。若收藏夹里的地址打不开，先看公告条日期是否更新。</div>
+      </details>
+
+      <details class="faq">
+        <summary>怎么确认看到的页面是正规版本？</summary>
+        <div class="answer">页面自身有 5 处可核对痕迹：公告条日期标签、版规“第 3 版”与 11 月 4 日生效日、精华目录三位序号、搜索无结果提示、页脚更新时间。这些痕迹在同一页内可以互相验证，比记域名更可靠。</div>
+      </details>
+
+      <details class="faq">
+        <summary>转载帖需要标注哪些信息？</summary>
+        <div class="answer">按 11 月 4 日生效的版规第 3 版，转载帖须写明原始出处与原始发布时间，缺一不可。执行三天内，原创图文分享区有 27 条重复帖被合并，转载占比从约 31% 降到 18%。</div>
+      </details>
+
+      <details class="faq">
+        <summary>搜索没有结果时怎么办？</summary>
+        <div class="answer">先换版块前缀再试，例如把「夜景」换成「[图文] 夜景」。若仍无结果，检查关键词是否含错别字；检索框对全角与半角符号敏感。页面会给出“未找到相关条目”的提示，而不是返回空白页。</div>
+      </details>
+
+      <details class="faq">
+        <summary>精华目录多久整理一次？</summary>
+        <div class="answer">自 10 月 31 日起改为周更，由版主「北屿」在每周日晚整理上一周收录帖。第一期编号 001，收录 24 帖，目录帖本身也接受补充建议。</div>
+      </details>
+
+      <details class="faq">
+        <summary>发帖被版主提醒补充信息，会影响账号吗？</summary>
+        <div class="answer">提醒本身不影响账号，补全信息后帖子正常展示。只有在同一版块重复发布相同内容超过 2 次时，才会触发合并处理。申诉入口在站务区，处理记录保留 30 天。</div>
+      </details>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="block" id="voices">
+      <h2>用户评论</h2>
+      <p class="sub">来自新手问答区与站务区的公开回复，保留原有语气。</p>
+      <div class="comments">
+        <div class="comment">
+          <div class="comment-head"><b>南岸阿墨</b><span>11月6日 22:14</span></div>
+          <p>城西那条路线帖里的第 4 个机位，我上周去过，围挡已经拆了，视角比帖子里拍的更宽。作者标注的 35mm 也够用，不必上广角。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head"><b>雾港</b><span>11月5日 09:02</span></div>
+          <p>同意从公告条进入的做法。收藏夹里存了三个地址，有两个已经打不开，反而公告条的日期标签最稳。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head"><b>老K不拍照</b><span>11月5日 15:40</span></div>
+          <p>我还是觉得记域名省事，每次点公告条太绕。不过版规第 3 版那个转载标注确实有用，至少能看出哪些帖是搬来的。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head"><b>半卷胶带</b><span>11月4日 19:27</span></div>
+          <p>器材清单帖的 800 元档写得实在，三脚架那项给了二手替代，比一堆只报型号的帖子强。就是没写重量，背着走一天差别不小。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head"><b>北屿</b><span>11月3日 11:08</span></div>
+          <p>精华目录第一期 001 已发，收了 24 帖，有遗漏直接在目录帖下回复序号。周更时间定在周日晚，别催太早。</p>
+        </div>
+        <div class="comment">
+          <div class="comment-head"><b>灰阶练习生</b><span>11月2日 23:51</span></div>
+          <p>后期调色区这两周有点冷，一周才十几帖，长文多但回复少。希望多几个拿原片对比的帖子，光看成品图学不到东西。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="block" id="news">
+      <h2>相关资讯</h2>
+      <p class="sub">与入口、规则、版块调整有关的短讯，每条只讲一件事。</p>
+      <ul class="tight-list">
+        <li><time>11月7日</time><div><strong>访问核对清单上线</strong><span>5 项观察点整理成一页对照表，放在体验指南板块，配套说明限制：只能初筛。</span></div></li>
+        <li><time>11月6日</time><div><strong>两个新频道加入索引</strong><span>「器材交流」与「路线记录」进入频道列表，总数为 10，原有名称未改。</span></div></li>
+        <li><time>11月4日</time><div><strong>转载标注规则执行首日</strong><span>站务区记录显示，当天有 11 条帖子被要求补充出处，其中 7 条在 2 小时内改好。</span></div></li>
+        <li><time>11月1日</time><div><strong>精华目录启用三位序号</strong><span>编号从 001 起，便于在回复中直接引用，避免只写“那个合集”。</span></div></li>
+        <li><time>10月30日</time><div><strong>新手问答区调整回复排序</strong><span>带引用编号的回复优先展示，减少“同上”“同问”堆叠。</span></div></li>
+      </ul>
+    </section>
+
+    <!-- 相关推荐 -->
+    <section class="block" id="board">
+      <h2>相关推荐</h2>
+      <p class="sub">按你正在查的内容，给出可以直接点开的条目与检索词。</p>
+      <div class="chips">
+        <a href="/#analysis">入口真伪的 5 项核对</a>
+        <a href="/#guide">版块前缀怎么用</a>
+        <a href="/#faq">转载标注要求</a>
+        <a href="/#picked">城西夜行 7 机位</a>
+        <a href="/#picked">短途装备三档预算</a>
+        <a href="/#voices">精华目录 001 讨论</a>
+        <a href="/#updates">规则变更时间线</a>
+        <a href="/#channels">相机器材交流频道</a>
+        <a href="/#channels">夜间拍摄技巧频道</a>
+        <a href="/#news">搜索无结果提示</a>
+      </div>
+    </section>
+
+    <!-- 补充板块：热度榜 -->
+    <section class="block" id="rank">
+      <h2>11 月第一周讨论热度榜</h2>
+      <p class="sub">按回复数排序，统计区间 11 月 1 日至 11 月 7 日。</p>
+      <ol class="rank">
+        <li><span>城西夜行路线帖：7 个机位与拍摄参数</span><span class="score">回复 186</span></li>
+        <li><span>新手必读：版规第 3 版改了什么</span><span class="score">回复 143</span></li>
+        <li><span>短途装备清单：三档预算对照</span><span class="score">回复 121</span></li>
+        <li><span>用版块前缀替代全文搜索</span><span class="score">回复 96</span></li>
+        <li><span>精华目录 001：24 帖收录讨论</span><span class="score">回复 88</span></li>
+        <li><span>雨天替补机位征集</span><span class="score">回复 74</span></li>
+      </ol>
+      <div class="pullquote">
+        “序号比标题好引用，回复里写‘看 001 号第 14 条’，别人一搜就到。”
+        <footer>—— 版主 北屿，11 月 3 日精华目录帖</footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside class="rail" aria-label="侧边导航与标签">
+    <div class="rail-card">
+      <h2>页内导航</h2>
+      <ul class="rail-nav" id="railNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picked">本周精选</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#channels">频道入口</a></li>
+        <li><a href="/#analysis">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#voices">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">热度榜</a></li>
+      </ul>
+    </div>
+    <div class="rail-card">
+      <h2>热门检索词</h2>
+      <div class="rail-tags">
+        <a href="/#analysis">版本号核对</a>
+        <a href="/#guide">版块前缀</a>
+        <a href="/#faq">转载出处</a>
+        <a href="/#updates">公告条日期</a>
+        <a href="/#picked">夜拍机位</a>
+        <a href="/#channels">器材型号</a>
+        <a href="/#voices">精华目录序号</a>
+      </div>
+    </div>
+    <div class="rail-card">
+      <h2>本期要点</h2>
+      <p style="font-size:var(--fs-sm);color:var(--ink-2);margin:0">版规第 3 版 11 月 4 日生效；精华目录周更；核对入口看 5 项页面痕迹，单看域名不够。</p>
+    </div>
+  </aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-label="杏吧论坛网址图形标志">
+            <rect width="64" height="64" rx="14" fill="#f3c46a"/>
+            <path d="M32 13c9 6.5 15 12.5 15 21a15 15 0 0 1-30 0c0-8.5 6-14.5 15-21z" fill="#0b3b36"/>
+            <circle cx="32" cy="38" r="5.4" fill="#f3c46a"/>
+          </svg>
+          <strong>杏吧论坛网址</strong>
+        </div>
+        <p class="foot-note">把版块、规则与入口变化整理成可检索的索引，日期与序号都能在正文找到对应条目。示例内容用于说明结构，不构成对任何具体地址的担保。</p>
+      </div>
+      <div>
+        <h3>主题频道</h3>
+        <ul>
+          <li><a href="/#picked">原创图文分享</a></li>
+          <li><a href="/#channels">相机器材交流</a></li>
+          <li><a href="/#guide">夜间拍摄技巧</a></li>
+          <li><a href="/#channels">城市路线记录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用帮助</h3>
+        <ul>
+          <li><a href="/#guide">版本核对步骤</a></li>
+          <li><a href="/#faq">转载标注要求</a></li>
+          <li><a href="/#faq">搜索无结果处理</a></li>
+          <li><a href="/#rank">每周热度榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>更新与说明</h3>
+        <ul>
+          <li><a href="/#updates">更新记录</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#voices">用户讨论</a></li>
+          <li><a href="/#analysis">入口判断依据</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>示例数据说明：频道数量、回复数、帖子日期均为演示用途，按 2026 年 11 月 8 日基准生成。</span>
+      <span>页面更新时间：2026 年 11 月 7 日 · 对应更新记录中的公告条、频道索引与核对清单三项</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到页面顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  var toTop = document.getElementById('toTop');
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var msg = document.getElementById('searchMsg');
+  var railLinks = Array.prototype.slice.call(document.querySelectorAll('#railNav a'));
+
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target && e.target.tagName === 'A' && window.innerWidth <= 860){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  // 平滑滚动（为吸顶预留偏移）
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="/#"]') : null;
+    if(!a) return;
+    var id = a.getAttribute('href').slice(2);
+    var target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    var sticky = document.querySelector('.sticky-shell');
+    var offset = (sticky ? sticky.getBoundingClientRect().height : 0) + 14;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({top: top, behavior: reduce ? 'auto' : 'smooth'});
+    if(window.innerWidth <= 860 && nav.classList.contains('open')){
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+    if(history.replaceState){ history.replaceState(null,'', '/#' + id); }
+  });
+
+  // 回到顶部
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){
+      if(window.pageYOffset > 420){ toTop.classList.add('show'); }
+      else { toTop.classList.remove('show'); }
+      highlight();
+      ticking = false;
+    });
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // 侧栏滚动高亮
+  var sections = railLinks.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(2));
+  }).filter(Boolean);
+  function highlight(){
+    var sticky = document.querySelector('.sticky-shell');
+    var offset = (sticky ? sticky.getBoundingClientRect().height : 0) + 60;
+    var idx = -1;
+    for(var i=0;i<sections.length;i++){
+      var r = sections[i].getBoundingClientRect();
+      if(r.top <= offset){ idx = i; }
+    }
+    railLinks.forEach(function(a,i){ a.classList.toggle('active', i === idx); });
+  }
+
+  // 本地检索
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var kw = (input.value || '').trim();
+      if(!kw){
+        msg.textContent = '请输入要查找的版块或条目关键词。';
+        msg.classList.add('on');
+        return;
+      }
+      var nodes = document.querySelectorAll('main h2, main h3, main .chips a, main .tight-list strong, main details.faq summary, main .rank span');
+      var hit = null;
+      for(var i=0;i<nodes.length;i++){
+        var txt = (nodes[i].textContent || '').replace(/\s+/g,'');
+        if(txt.indexOf(kw.replace(/\s+/g,'')) > -1){
+          var box = nodes[i].closest('section') || nodes[i];
+          if(box && box.id){ hit = box; break; }
+          hit = box;
+          break;
+        }
+      }
+      if(hit){
+        msg.classList.remove('on');
+        var sticky = document.querySelector('.sticky-shell');
+        var offset = (sticky ? sticky.getBoundingClientRect().height : 0) + 14;
+        var top = hit.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({top: Math.max(top,0), behavior: reduce ? 'auto' : 'smooth'});
+        var targetId = hit.id;
+        if(targetId && history.replaceState){ history.replaceState(null,'', '/#' + targetId); }
+      } else {
+        msg.textContent = '未找到与“' + kw + '”相关的条目，试试换成频道名或帖子前缀，例如「[图文]」。';
+        msg.classList.add('on');
+      }
+    });
+  }
+
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "杏吧论坛网址",
+  "description": "社区导航与内容检索参考，整理版块入口、访问方式、常见问题与更新记录。",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "论坛的入口地址为什么会变化？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "入口调整通常与线路维护或域名备案信息更新有关，具体原因写在站务公告里。10 月 26 日的公告建议从公告条进入，而不是依赖外部收藏。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎么确认看到的页面是正规版本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "页面自身有 5 处可核对痕迹：公告条日期标签、版规第 3 版与 11 月 4 日生效日、精华目录三位序号、搜索无结果提示、页脚更新时间。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "转载帖需要标注哪些信息？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按 11 月 4 日生效的版规第 3 版，转载帖须写明原始出处与原始发布时间，缺一不可。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "搜索没有结果时怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先换版块前缀再试，例如把「夜景」换成「[图文] 夜景」。若仍无结果，检查关键词是否含错别字，检索框对全角与半角符号敏感。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "精华目录多久整理一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "自 10 月 31 日起改为周更，由版主北屿在每周日晚整理上一周收录帖，第一期编号 001，收录 24 帖。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "发帖被版主提醒补充信息，会影响账号吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "提醒本身不影响账号，补全信息后帖子正常展示。同一版块重复发布相同内容超过 2 次才会触发合并处理，申诉入口在站务区。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+      </html>
